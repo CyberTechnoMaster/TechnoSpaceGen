@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="./specgen.css">
+<link rel="stylesheet" type="text/css" href="./cubes.css">
+
+<script src="specgenGenerator.js"></script>
+
+
+<div class="worklet-canvasOverall"></div>
+
+<script>
+    //CSS.paintWorklet.addModule('./specgen.js');
+    document.documentElement.style.setProperty('--pattern-seed', Math.random() * 10000);
+</script>
+
+
+<div class="scene">
+    <div class="cube">
+        <div class="cube__face cube__face--front">front</div>
+        <div class="cube__face cube__face--back">back</div>
+        <div class="cube__face cube__face--right">right</div>
+        <div class="cube__face cube__face--left">left</div>
+        <div class="cube__face cube__face--top">top</div>
+        <div class="cube__face cube__face--bottom">bottom</div>
+    </div>
+</div>

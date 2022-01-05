@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+/* --- Universal Box Sizing with Inheritance --- */
+html {
+  box-sizing: border-box;
+  color: #eb1206c5;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* --- Colours --- */
+$w: #fff;
+$p: #eea9e3;
+$pd: #d157a7;
+$g: #ffdcd8;
+$gd: #986962;
+$t: transparent;
+
+/* --- Styles --- */
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.worklet-canvas {
+  background: rgba(0, 0, 0, 0);
+  filter: saturate(1.25);
+
+}
+/*
+.worklet-canvas::before,
+  .worklet-canvas::after {
+    content: '#Ofer Wasserman';
+    height: 85%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13vmin;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px $p, 0 0 15px $p, 0 0 25px $p, 0 0 35px $p, 0 0 50px $pd,
+      0 0 75px $pd, 0 0 100px $pd, 0 0 150px $pd;
+    animation: flicker 1.5s infinite alternate;
+  }
+
+  .worklet-canvas::after {
+    transform: rotateX(180deg) translateY(82%);
+    filter: blur(3px) opacity(50%);
+  }
+*/
+@keyframes flicker {
+  0%,
+  16%,
+  18%,
+  21%,
+  23%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px $p, 0 0 15px $p, 0 0 25px $p, 0 0 35px $p, 0 0 50px $pd,
+      0 0 75px $pd, 0 0 100px $pd, 0 0 150px $pd;
+  }
+
+  17%,
+  22%,
+  55% {
+    text-shadow: 0 0 5px $p, 0 0 5px $p, 0 0 5px $p, 0 0 15px $p, 0 0 30px $pd,
+      0 0 45px $pd, 0 0 75px $pd, 0 0 125px $pd;
+  }
+}
